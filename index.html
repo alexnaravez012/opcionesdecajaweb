@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./data/style.css">
+    <link rel="stylesheet" href="./fontawesome-web/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400&display=swap" rel="stylesheet">
+    <title>Denlíne@</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="uk-flex uk-flex-between navbar-createproduct">
+        <div class="uk-flex uk-flex-middle">
+            <div uk-toggle="target: .menu-vertical-createproduct; cls: show" class="padding-horizontal-20">
+                <i class="fas fa-bars font-size-20 color-blue cursor-pointer" style="margin-left: 10px;" uk-toggle="target: .main-container-createproduct; cls: width-menu-vertical-createproduct"></i>
+            </div>
+            <div>
+                <img src="./data/logo1.png" class="logo-size-createproduct" alt="">
+            </div>
+            <div class="uk-inline">
+                <div class="cursor-pointer uk-flex uk-flex-middle" style="margin-left: 60px;">
+                    <img class="logo-store-size-createproduct" src="./data/logo2.png " alt=" ">
+                    <i class="fas fa-caret-down font-size-17"></i>
+                </div>
+                <div uk-drop="mode: click">
+                    <div style="position: relative;">
+                        <div class="drop-store-createproduct">
+                            <!-- <ul class="uk-list " style="padding-bottom: 20px;">
+                                <h6 class="uk-margin-remove font-size-10" style="width: 65px; padding-bottom: 10px;">Documento del proveedor</h6>
+                                <div class="hr-tab"></div>
+                                <button class="button-search-supplier-createproduct uk-text-bold">Buscar proveedor</button>
+                                <h6 class=" uk-margin-remove font-size-10">Seleccione tienda proveedora</h6>
+                                <div class="select-supplier-createproduct">
+                                    <select>
+                                        <option>--</option>
+                                        <option>opción 1</option>
+                                        <option>opción 2</option>
+                                        <option>opción 3</option>
+                                        <option>opción 4</option>
+                                    </select>
+                                    <div class="select_arrow-supplier-createproduct">
+                                    </div>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Proveedor:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">--</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Documento:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">--000</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Teléfono:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">000</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Dirección:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">N/A</h6>
+                                </div>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-inline cursor-pointer padding-horizontal-30 uk-flex uk-flex-middle">
+            <button class="button-data-user-createproduct uk-flex uk-flex-middle">
+                <img class="logo-user-size-createproduct" src="./data/user.png " alt=" ">
+                <h4 class="uk-text-bold uk-margin-remove" style="padding-right: 5px;">Mireya Mopan</h4>
+                <i class="fas fa-caret-down "></i>
+            </button>
+            <div uk-drop="mode: click">
+                <div class="uk-card uk-card-body uk-card-default uk-box-shadow-large drop-data-user-createproduct">
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove">Roles activados:</h5>
+                        <h5 class="uk-margin-remove ">Propietario de la empresa</h5>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove ">Su documento es:</h5>
+                        <h5 class="uk-margin-remove ">CC: 55555555555001</h5>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove">Id de usuario:</h5>
+                        <h5 class="uk-margin-remove ">94518</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Menu vertical ERP-->
+    <div style="position: relative;">
+        <div class="menu-vertical-createproduct">
+            <ul class="uk-list" style="padding-bottom: 20px;">
+                <div class="uk-flex uk-flex-between">
+                    <div style="margin-left: 33px;">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold">ERP</h4>
+                        <h4 class="uk-margin-remove color-blue uk-text-bold">Dashboard</h4>
+                    </div>
+                    <div style="padding-right: 5px;">
+                        <div uk-toggle="target: .menu-vertical-createproduct; cls: show" style="margin-right: 10px;">
+                            <i class=" fas fa-times font-size-17 color-blue cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/7.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Inventario</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/8.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Reportes</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/9.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Tercero</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/10.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Contabilidad</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/11.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Pedidos</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/12.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Crear producto</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/13.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Opciones de caja</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/14.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Domicilios</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/15.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12" style="width: 100px;">Administracion de pedidos</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-createproduct">
+                        <img class="img-menu-vertical-size-createproduct" src="./data/14.png" alt="">
+                        <h4 class="uk-margin-remove color-blue uk-text-bold font-size-12">Mesas</h4>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- Crear Producto-->
+    <div style="display: inline;">
+        <!-- Contenido -->
+        <div class="main-container-createproduct">
+            <div class="uk-flex uk-flex-middle navbar-search-products-createproduct">
+                <div class="uk-flex uk-flex-center uk-flex-middle" style="padding-left: 30px; padding-top: 18px; height: 45px; border-bottom: 18px solid white;">
+                    <h4 class="uk-margin-remove uk-text-bold">Crear Producto</h4>
+                </div>
+                <div class="uk-flex uk-flex-middle uk-flex-center button-categories-createproduct" style="width: 150px !important;">
+                    <h6 class="uk-margin-remove uk-text-bold color-blue cursor-pointer uk-text-center" style="padding-top: 21px;">Crear Producto</h6>
+                </div>
+                <div style="margin-left: 53px;">
+                    <h6 class="uk-margin-remove uk-text-bold color-blue cursor-pointer">Ver productos nuevos</h6>
+                </div>
+            </div>
+            <div>
+                <div class="uk-flex uk-flex-middle">
+                    <div>
+                        <div class="uk-flex uk-flex-middle navbar-search-products-re-createproduct" style="margin-left: 23px;">
+                            <div style="margin-top: 30px; margin-left: 40px; margin-bottom: 2px;">
+                                <input class="input-register-user-createproduct font-size-12" type="text" placeholder="Código de barras" style="width: 130px;">
+                            </div>
+                            <div style="margin-top: 30px; margin-left: 10px; margin-bottom: 2px;">
+                                <input class="input-register-user-createproduct font-size-12" type="text" placeholder="Nombre producto" style="width: 130px;">
+                            </div>
+                            <div style="margin-top: 15px; margin-left: 18px; margin-bottom: 2px;">
+                                <h6 class="uk-margin-remove font-size-11">Costo antes de IVA</h6>
+                                <input class="input-register-user-createproduct font-size-12" type="text" placeholder="$0.00" style="width: 130px;">
+                            </div>
+                            <div style="margin-top: 15px; margin-left: 25px; margin-bottom: 2px;">
+                                <h6 class="uk-margin-remove font-size-11">Precio antes de IVA</h6>
+                                <input class="input-register-user-createproduct font-size-12" type="text" placeholder="$0.00" style="width: 130px;">
+                            </div>
+                            <div style="margin-left: 60px; margin-top: 12px;">
+                                <div class="select-create-product-createproduct " style="width: 130px;">
+                                    <select>
+                                            <option>Seleccione IVA</option>
+                                            <option>opción 1</option>
+                                            <option>opción 2</option>
+                                            <option>opción 3</option>
+                                            <option>opción 4</option>
+                                        </select>
+                                    <div class="select_arrow-create-product-createproduct">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: 63px;">
+                    <h6 class="uk-margin-remove color-celeste font-weight-500 font-size-12">COSAS: 0.0</h6>
+                </div>
+                <div class="uk-flex uk-flex-middle">
+                    <div>
+                        <div class="uk-flex uk-flex-middle navbar-search-products-re-createproduct" style="margin-left: 23px;">
+                            <div style="margin-top: 15px; margin-left: 40px; margin-bottom: 2px;">
+                                <h6 class="uk-margin-remove font-size-11">Costo tras IVA</h6>
+                                <input class="input-register-user-createproduct font-size-12" type="text" placeholder="$0.00" style="width: 130px;">
+                            </div>
+                            <div style="margin-top: 15px; margin-left: 10px; margin-bottom: 2px;">
+                                <h6 class="uk-margin-remove font-size-11">Precio tras IVA</h6>
+                                <input class="input-register-user-createproduct font-size-12" type="text" placeholder="$0.00" style="width: 130px;">
+                            </div>
+                            <div style="margin-top: 15px; margin-left: 18px; margin-bottom: 2px;">
+                                <h6 class="uk-margin-remove font-size-11">Cantidad</h6>
+                                <input class="input-register-user-createproduct font-size-12" type="text" placeholder="0" style="width: 130px;">
+                            </div>
+                            <div style="margin-left: 25px;">
+                                <h6 class="uk-margin-remove font-size-9 ">Seleccione unidad de medida</h6>
+                                <div class="select-create-product-createproduct " style="width: 130px;">
+                                    <select>
+                                            <option>Sin unidad de medida</option>
+                                            <option>opción 1</option>
+                                            <option>opción 2</option>
+                                            <option>opción 3</option>
+                                            <option>opción 4</option>
+                                        </select>
+                                    <div class="select_arrow-create-product-createproduct">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-middle" style="margin-left: 63px; padding-bottom: 20px;">
+                    <div>
+                        <h6 class="uk-margin-remove font-size-11 ">Seleccione Línea</h6>
+                        <div class="select-create-product-createproduct " style="width: 130px;">
+                            <select style="color: rgba(0, 0, 182, 0.459);">
+                                    <option>Sin Línea</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-createproduct">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 38px;">
+                        <h6 class="uk-margin-remove font-size-11 ">Seleccione Marca</h6>
+                        <div class="select-create-product-createproduct " style="width: 130px;">
+                            <select style="color: rgba(0, 0, 182, 0.459);">
+                                    <option>Sin Marca</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-createproduct">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; margin-left: 230px; margin-bottom: 2px;">
+                        <h6 class="uk-margin-remove font-size-9">Nombre o documento del proveedor</h6>
+                        <input class="input-register-user-createproduct font-size-12" type="text" style="width: 130px;">
+                    </div>
+                    <div style="margin-left: 60px; margin-top: 5px;">
+                        <button class="button-search-actualice-createproduct" style="height: 25px; width: 170px; color: #4496fa;">Buscar proveedor</button>
+                    </div>
+                    <div style="margin-top: 15px; margin-left: 40px; margin-bottom: 2px;">
+                        <input class="input-register-user-createproduct-grey" type="text" placeholder="Código de proveedor" style="width: 120px;">
+                    </div>
+                </div>
+                <div class="navbar-product-select-createproduct">
+                </div>
+                <div class="uk-flex uk-flex-center">
+                    <div class="uk-flex uk-flex-middle" style="margin-top: 10px;">
+                        <h5 class="uk-margin-remove color-celeste font-weight-500">Proveedor Seleccionado:</h5>
+                        <h5 class="uk-margin-remove color-celeste font-weight-500">---</h5>
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-middle" style="margin-top: 10px;">
+                    <img class="size-img-upload-image" src="./data/Recurso-cargar-imagenes.png" alt="">
+                    <h6 class="uk-margin-remove uk-text-light font-size-12">Sin archivo</h6>
+                    <div class="uk-flex uk-flex-middle" style="margin-left: 200px;">
+                        <button class="button-search-actualice-createproduct" style="height: 25px; width: 180px; margin-right: 10px; color: #4496fa;">CREAR</button>
+                        <button class="button-search-actualice-createproduct" style="height: 25px; width: 180px; color: red;">CANCELAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- generar pedido -->
+    <div style="display: none">
+        <div class="main-container-createproduct">
+            <div class="uk-flex uk-flex-middle navbar-search-products-createproduct">
+                <div class="uk-flex uk-flex-center uk-flex-middle" style="padding-left: 40px; ">
+                    <h4 class="uk-margin-remove uk-text-bold">Crear Producto</h4>
+                </div>
+                <div>
+                    <h6 class="uk-margin-remove uk-text-bold color-blue cursor-pointer uk-text-center" style="padding-left: 100px;">Crear Producto</h6>
+                </div>
+                <div class="button-trademark-createproduct uk-flex uk-flex-middle uk-flex-center" style="margin-left: 60px; width: 200px;">
+                    <h6 class="uk-margin-remove uk-text-bold color-blue cursor-pointer" style="padding-top: 21px;">Ver productos nuevos</h6>
+                </div>
+            </div>
+            <div style="margin-top: 5px;">
+                <div class="uk-flex uk-flex-middle">
+                    <h6 class="uk-margin-remove font-size-11 color-grey" style="padding-left: 35px;">*De click sobre un pedido para ver más opciones*</h6>
+                    <div style="margin-top: 15px; margin-left: 40px; margin-bottom: 2px;">
+                        <input class="input-register-user-createproduct-grey font-size-12" type="text" placeholder="Buscador" style="width: 120px;">
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;">
+                        <h6 class="uk-margin-remove color-blue uk-text-bold font-size-13 uk-text-center width-200">Nombre</h6>
+                        <h6 class="uk-margin-remove color-blue uk-text-bold font-size-13 uk-text-center width-200">Código Rápido</h6>
+                        <h6 class="uk-margin-remove color-blue uk-text-bold font-size-13 uk-text-center width-200">Código de barras</h6>
+                    </div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px; margin-top: 10px;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ACEITE SOYA DOÑA LUPE 500L</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">220879</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ACEITE GAVIOTA X 500ML</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">52978</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ACEITE GAVIOTA X1000ML</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">43059</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ACEITE LA COSECHA</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ACEITE LA GAVIOTA X900ML</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ACEITE NETRESANO X110ML</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="uk-flex uk-flex-middle padding-vertical-5" style="padding-left: 225px;;">
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">ABRELATA DESTAPADOR</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">22143</h6>
+                        <h6 class="uk-margin-remove font-size-12 uk-text-center width-200">8804382001004</h6>
+                    </div>
+                    <div class="hr-tab"></div>
+
+                </div>
+            </div>
+            <div class="footer uk-flex uk-flex-middle">
+                <h6 class="uk-margin-remove font-size-11">Items per page</h6>
+                <div class="padding-horizontal-10">
+                    <div class="select-create-product-createproduct " style="width: 90px; margin-bottom: 8px;">
+                        <select>
+                                <option>15</option>
+                                <option>opción 1</option>
+                                <option>opción 2</option>
+                                <option>opción 3</option>
+                                <option>opción 4</option>
+                            </select>
+                        <div class="select_arrow-create-product-createproduct">
+                        </div>
+                    </div>
+                </div>
+                <h6 class="uk-margin-remove font-size-11 padding-horizontal-10"><span>1</span> de <span>16</span> pages (<span>96</span> items)</h6>
+                <div class="uk-flex uk-flex-middle">
+                    <i class="fas fa-caret-left color-black font-size-13"></i>
+                    <i class="fas fa-caret-right color-black font-size-13" style="padding-left: 10px;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
